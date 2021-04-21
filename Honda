@@ -1,0 +1,48 @@
+package Exercise3_1;
+
+public class Honda extends Car {
+
+	private double discount;
+	private int years;
+	private double interest;
+	private double rate;
+
+	
+	public Honda() {
+		super();
+    System.out.println("Enter the Discount Rate(%): ");
+    discount=s.nextDouble();
+		System.out.println("Enter the Loan Period(Years): ");
+		years=s.nextInt();
+		System.out.println("Enter the Interest Rate(%): ");
+		rate=s.nextDouble();
+		
+	}
+	
+	public double getDiscount() {
+		return discount;
+	}
+	
+	public double getTotalPrice() { 
+		return super.getPrice()* discount/100;
+	}
+	
+	public double getInterest() {
+		interest = (getTotalPrice()*rate/100)*years;
+		return interest;
+	}
+
+	public double getTotalInstallmentPayable() {
+		 
+		return super.getPrice() + interest;
+	}
+	
+	public double MonthlyPayment() {
+ 
+		return getTotalInstallmentPayable()/12;
+	}
+	
+	public String toString() {
+		return super.toString() + "\nDiscount Rate\t\t: " + discount + "%" + "\nLoan Period\t\t: " + years + "years" + "\nInterest Rate(%)\t: " + rate + "%";
+	}
+}
