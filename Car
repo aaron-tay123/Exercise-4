@@ -1,0 +1,63 @@
+package Exercise3_1;
+
+import java.util.Scanner;
+
+	public class Car {
+
+		
+		private String brand;
+		private String model;
+		private String colour;
+		private String size;
+		private int price;
+		
+		Scanner s = new Scanner(System.in);
+		
+		
+		//default constructor
+		Car() {
+			System.out.println("Enter the brand of the car: ");
+			this.brand = s.nextLine();
+			System.out.println("Enter the model of the car: ");
+			this.model = s.next();
+			System.out.println("Enter the colour of the car: ");
+			this.colour = s.next();
+			System.out.println("Enter the size of the car: ");
+			this.size = s.next();
+			System.out.println("Enter the price of the car: ");
+			this.price = s.nextInt();
+			System.out.println();
+		}
+		
+		public Car(String b, String m, String c, String s, int p) {
+			this.brand=b;
+			this.model=m;
+			this.colour=c;
+			this.size=s;
+			this.price=p;
+		}
+		
+		public String getBrand() {
+			return this.brand;
+		}
+		
+		public String getModel() {
+			return this.model;
+		}
+		
+		public String getColour() {
+			return this.colour;
+		}
+		
+		public String getSize() {
+			return this.size;
+		}
+		
+		public int getPrice() {
+			return this.price;
+		}
+		
+		public String toString() {
+			return "Brand\t\t\t: " + brand + "\nModel\t\t\t: " + model + "\nColour\t\t\t: " + colour + "\nSize\t\t\t: " + size + "\nPrice\t\t\t: RM" + price;
+		}
+}
