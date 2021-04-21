@@ -1,0 +1,21 @@
+package Exercise3_1;
+
+public class Main {
+
+	public static void main(String[] args) {
+
+		Car obj = new Car();
+		System.out.println(obj.toString());
+		System.out.println("\n_____________________________________________");
+		System.out.println("");
+		
+		Honda obj1 = new Honda();
+		System.out.println(obj1.toString());
+		System.out.println("");
+		System.out.println("Total Price with discount: RM" + obj1.getTotalPrice());
+		System.out.println("Total Installment Payable: RM" + obj1.getTotalInstallmentPayable());
+		System.out.println("Monthly Payment          : RM" + obj1.MonthlyPayment());
+		System.out.println("");
+	}
+
+}
